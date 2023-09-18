@@ -1,7 +1,6 @@
 #pragma version 9
 // contracts/dao.algo.ts:79
 // this.forgetVote()
-// no dupn needed
 callsub forgetVote
 int 1
 return

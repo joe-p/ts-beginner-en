@@ -20,7 +20,7 @@ class Dao extends Contract {
   }
 
   bootstrap(): Asset {
-    assert(this.txn.sender === this.app.creator);
+    verifyTxn(this.txn, { sender: this.app.creator });
     assert(!this.registeredAsaId.exists);
     const registeredAsa = sendAssetCreation({
       configAssetTotal: 1_000,
